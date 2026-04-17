@@ -1,26 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-
-  // ===============================
-  // 🔄 TOGGLE PANELS (UI)
-  // ===============================
-  const signUpButton = document.getElementById('signUp');
-  const signInButton = document.getElementById('signIn');
-  const container = document.getElementById('container');
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
   
 
-  if (signUpButton && signInButton) {
-    signUpButton.addEventListener('click', () => {
-      container.classList.add("right-panel-active");
-    });
-
-    signInButton.addEventListener('click', () => {
-      container.classList.remove("right-panel-active");
-    });
+if (signUpButton && signInButton) {
+signUpButton.addEventListener('click', () => {
+    container.classList.add("right-panel-active");
+});
+signInButton.addEventListener('click', () => {
+    container.classList.remove("right-panel-active");
+});
   }
 
-  // ===============================
-  // 🔐 LOGIN (SIGN IN)
-  // ===============================
   const signInForm = document.querySelector('.sign-in-container form');
 
   if (signInForm) {
@@ -59,9 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ===============================
-  // 🆕 REGISTER (SIGN UP)
-  // ===============================
+
   const signUpForm = document.querySelector('.sign-up-container form');
 
   if (signUpForm) {
@@ -85,23 +75,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (data.success) {
           alert("Account created successfully ✅");
-
-          // switch to login panel
           container.classList.remove("right-panel-active");
         } else {
           alert(data.message || "Registration failed ❌");
         }
-
       } catch (error) {
         console.log(error);
         alert("Server error ❌");
       }
     });
   }
-
 });
-
-
 
 const username = email.split('@')[0];
 localStorage.setItem("username", username);

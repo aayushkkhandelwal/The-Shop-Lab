@@ -1,7 +1,4 @@
-
-
 const cart = JSON.parse(localStorage.getItem("cart")) || [];
-
 const orderContainer = document.getElementById("orderItems");
 const totalPriceEl = document.getElementById("totalPrice");
 
@@ -10,7 +7,6 @@ let total = 0;
 
 cart.forEach(item => {
   const div = document.createElement("div");
-
   div.innerHTML = `
     <img src="${item.image}">
     <p>${item.name}</p>
@@ -22,32 +18,19 @@ cart.forEach(item => {
   total += item.price * item.quantity;
 });
 
-
 totalPriceEl.innerText = total.toFixed(2);
-
-
 document.getElementById("checkoutForm").addEventListener("submit", function(e) {
   e.preventDefault();
-
   alert("🎉 Order placed successfully!");
-
   localStorage.removeItem("cart");
-
   window.location.href = "indexamazon.html";
 });
 
 const paymentCards = document.querySelectorAll(".payment-card");
-
 paymentCards.forEach(card => {
   card.addEventListener("click", () => {
-
-    // remove active from all
     paymentCards.forEach(c => c.classList.remove("active"));
-
-    // add active to clicked
     card.classList.add("active");
-
-    // check radio
     const input = card.querySelector("input");
     input.checked = true;
   });

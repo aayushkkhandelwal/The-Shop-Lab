@@ -58,22 +58,15 @@ function displayCart() {
     total += item.price * item.quantity;
   });
 
-  // ✅ total with ₹
   totalPriceEl.innerText = `₹${total.toFixed(2)}`;
 }
 
-// ===============================
-// ❌ REMOVE ITEM
-// ===============================
 function removeItem(index) {
   cart.splice(index, 1);
   updateStorage();
   displayCart();
 }
 
-// ===============================
-// 🔢 UPDATE QUANTITY
-// ===============================
 function updateQuantity(index, qty) {
   const quantity = parseInt(qty);
 
@@ -84,16 +77,10 @@ function updateQuantity(index, qty) {
   displayCart();
 }
 
-// ===============================
-// 💾 SAVE STORAGE
-// ===============================
 function updateStorage() {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-// ===============================
-// 🚀 INIT
-// ===============================
 document.addEventListener("DOMContentLoaded", function () {
 
   displayCart();
@@ -102,9 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (checkoutBtn) {
     checkoutBtn.addEventListener("click", function () {
-
       const cart = JSON.parse(localStorage.getItem("cart")) || [];
-
       if (cart.length === 0) {
         alert("Your cart is empty!");
         return;

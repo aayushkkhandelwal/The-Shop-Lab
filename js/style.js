@@ -1,6 +1,4 @@
-// ===============================
-// 🛒 CART DATA
-// ===============================
+
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -15,9 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-// ===============================
-// ➕ ADD TO CART
-// ===============================
+
 function addToCart(productName, price, imageSrc) {
   const existingItem = cart.find(item => item.name === productName);
 
@@ -39,9 +35,7 @@ function addToCart(productName, price, imageSrc) {
   alert(`${productName} added to cart!`);
 }
 
-// ===============================
-// 🛒 UPDATE CART COUNT
-// ===============================
+
 function updateCartCount() {
   const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
 
@@ -52,23 +46,17 @@ function updateCartCount() {
   }
 }
 
-// ===============================
-// ❤️ LIKE BUTTON
-// ===============================
+
 function toggleLike(button) {
   button.classList.toggle('liked');
 }
 
-// ===============================
-// 🚀 INIT
-// ===============================
+
 document.addEventListener('DOMContentLoaded', function() {
 
   updateCartCount();
 
-  // ===============================
-  // ➕ ADD TO CART BUTTONS
-  // ===============================
+
   const addToCartButtons = document.querySelectorAll('.add-to-cart');
 
   addToCartButtons.forEach(button => {
@@ -78,8 +66,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
       const productName = box.querySelector('h2').textContent;
       const price = box.querySelector('.price').textContent;
-
-      // ✅ FIXED IMAGE (IMPORTANT)
       const imageSrc = box.querySelector('img').src;
 
       addToCart(productName, price, imageSrc);
@@ -87,8 +73,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
  
-  // ❤️ LIKE BUTTONS
-
   const likeButtons = document.querySelectorAll('.like-btn');
 
   likeButtons.forEach(button => {
@@ -97,8 +81,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-
-  // 🔍 SEARCH
 
   const searchInput = document.querySelector('.nav-search input');
   const searchSelect = document.querySelector('.search-select');
@@ -114,8 +96,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-
-  // 📩 NEWSLETTER
  
   const newsletterForm = document.querySelector('.newsletter-form');
 
@@ -130,11 +110,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // ===============================
-  // 🚪 LOGOUT (FIXED POSITION)
-  // ===============================
-  const logoutBtn = document.getElementById("logoutBtn");
 
+  const logoutBtn = document.getElementById("logoutBtn");
   if (logoutBtn) {
     logoutBtn.addEventListener("click", function () {
 
@@ -144,18 +121,14 @@ document.addEventListener('DOMContentLoaded', function() {
       window.location.href = "lgp.html";
     });
   }
-
 });
-
 
 
 const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot");
-
 let counter = 0;
 let autoSlideInterval;
 
-/* Set positions + background blur */
 slides.forEach((slide, index) => {
     slide.style.left = `${index * 100}%`;
 
@@ -163,42 +136,36 @@ slides.forEach((slide, index) => {
     slide.style.backgroundImage = `url(${img.src})`;
 });
 
-/* Update dots */
 const updateDots = () => {
     dots.forEach((dot, index) => {
         dot.classList.toggle("active", index === counter);
     });
 };
 
-/* Slide animation */
 const slideImage = () => {
     slides.forEach((slide) => {
         slide.style.transform = `translateX(-${counter * 100}%)`;
     });
 };
 
-/* Next */
 const goNext = () => {
     counter = (counter + 1) % slides.length;
     slideImage();
     updateDots();
 };
 
-/* Prev */
 const goPrev = () => {
     counter = (counter - 1 + slides.length) % slides.length;
     slideImage();
     updateDots();
 };
 
-/* Go to slide */
 const goToSlide = (index) => {
     counter = index;
     slideImage();
     updateDots();
 };
 
-/* Auto slide */
 const startAutoSlide = () => {
     autoSlideInterval = setInterval(goNext, 3000);
 };
@@ -207,22 +174,18 @@ const stopAutoSlide = () => {
     clearInterval(autoSlideInterval);
 };
 
-/* Init */
 updateDots();
 startAutoSlide();
 
-/* Pause on hover */
 const slider = document.querySelector("main");
 slider.addEventListener("mouseenter", stopAutoSlide);
 slider.addEventListener("mouseleave", startAutoSlide);
 
-/* Keyboard */
 document.addEventListener("keydown", (e) => {
     if (e.key === "ArrowLeft") goPrev();
     if (e.key === "ArrowRight") goNext();
 });
 
-/* Swipe */
 let startX = 0;
 
 slider.addEventListener("touchstart", (e) => {
@@ -242,7 +205,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const username = localStorage.getItem("username");
   const greeting = document.getElementById("userGreeting");
 
-  console.log("Username:", username); // DEBUG
+  console.log("Username:", username); 
 
   if (username && greeting) {
     greeting.textContent = `Hello, ${username}`;
