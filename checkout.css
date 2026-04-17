@@ -1,0 +1,147 @@
+/* ===== BODY ===== */
+body {
+  font-family: Arial, sans-serif;
+  background: #E6D3B3;
+  margin: 0;
+  color: #4B1D3F;
+}
+
+/* ===== CONTAINER ===== */
+.checkout-container {
+  max-width: 800px;
+  margin: 50px auto;
+  background: #FFFFFF;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ===== HEADING ===== */
+h1 {
+  text-align: center;
+  color: #5d460c;
+  margin-bottom: 20px;
+}
+
+/* ===== ORDER ITEMS ===== */
+#orderItems > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+#orderItems img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 6px;
+}
+
+/* ===== TOTAL ===== */
+h2 {
+  text-align: right;
+  color: #D62246;
+  margin-top: 20px;
+}
+
+/* ===== FORM ===== */
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Input focus */
+form input:focus {
+  border-color: #17BEBB;
+  box-shadow: 0 0 5px #17BEBB;
+}
+
+/* ===== BUTTON ===== */
+form button {
+  background: linear-gradient(135deg, #F96F5D, #C06E52);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* Hover */
+form button:hover {
+  transform: scale(1.03);
+}
+
+
+/* ===== PAYMENT SECTION ===== */
+
+.payment-title {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #43281C;
+}
+
+.payment-options {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* Card Style */
+.payment-card {
+  flex: 1;
+  background: #fff;
+  border: 2px solid #ddd;
+  padding: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  color: #4B1D3F;
+}
+
+/* Icons */
+.payment-card .icon {
+  font-size: 22px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Hover effect */
+.payment-card:hover {
+  border-color: #F96F5D;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* Active selected */
+.payment-card.active {
+  border-color: #F96F5D;
+  background: linear-gradient(135deg, #F96F5D, #C06E52);
+  color: white;
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .checkout-container {
+    margin: 20px;
+    padding: 20px;
+  }
+}

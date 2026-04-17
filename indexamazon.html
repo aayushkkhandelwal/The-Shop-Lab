@@ -1,0 +1,276 @@
+<!-- The Shop Lab -->
+
+<!-- Tagline: Discover what’s trending. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Shop lab</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+<body>
+  <header>
+    <div class="nav-bar">
+      <div class="logo-bar border">
+        <div class="logo">
+        </div>
+      </div>
+      <div class="nav-search">
+        <select class="search-select">
+          <option>All</option>
+          <option>Electronics</option>
+          <option>Books</option>
+          <option>Clothing</option>
+          <option>Home & Kitchen</option>
+          <option>Sports</option>
+          <option>Beauty</option>
+        </select>
+        <input placeholder="Search The Shop lab" type="text" />
+      </div>
+      <div class="nav-sign border">
+        <a href="login.html" style="color: white; text-decoration: none;">
+          <p><span id="userGreeting">Hello, sign in</span></p>
+        </a>
+      </div>
+      <div class="nav-return border">
+        <p><span>Returns</span></p>
+        <p class="nav-second">& Orders</p>
+      </div>
+      <div class="nav-cart border">
+        <a href="cart.html" style="color: white; text-decoration: none;">
+          <p><span>🛒</span></p>
+          <p>Cart</p>
+        </a>
+      </div>
+      <button id="logoutBtn" class="logoutbtn border">Logout</button>
+    </div>
+  </header>
+
+  <div class="herosection">
+    <div class="slider-container">
+      <div class="slide">
+            <img class="slideimg" src="photos/blackfriday.jpg" alt="">
+            <div class="caption">Beautiful Nature 1</div>
+        </div>
+
+        <div class="slide">
+            <img class="slideimg" src="photos/Summersales.jpg" alt="">
+            <div class="caption">Amazing View 2</div>
+        </div>
+
+        <div class="slide">
+            <img class="slideimg" src="photos/blackfriday.jpg" alt="">
+            <div class="caption">Mountain Scene 3</div>
+        </div>
+
+        <div class="slide">
+            <img class="slideimg" src="photos/Summersales.jpg" alt="">
+            <div class="caption">Sunset Vibes 4</div>
+        </div>
+        <!-- Navigation Buttons -->
+         <div class="nav">
+          <button onclick="goPrev()">Prev</button>
+          <button onclick="goNext()">Next</button>
+        </div>
+        <!-- Dots Indicator -->
+         <div class="dots">
+          <span class="dot" onclick="goToSlide(0)"></span>
+          <span class="dot" onclick="goToSlide(1)"></span>
+          <span class="dot" onclick="goToSlide(2)"></span>
+          <span class="dot" onclick="goToSlide(3)"></span>
+        </div>
+      </div>
+    </div>
+
+  <div class="shopsection">
+    <div class="box">
+      <div class="box-content">
+        <h2>Premium Hoodie</h2>
+        <div class="boximg">
+          <img src="photos/fashionhoodie.jpg" alt="Premium Hoodie" />
+          <p>See more</p>
+          <p class="price">₹299.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <button class="like-btn">&#10084;</button>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-content">
+        <h2>Nike combo</h2>
+        <div class="boximg">
+          <img src="photos/fashionnike.jpg" alt="Electronics Product" />
+          <p>See more</p>
+          <p class="price">₹699.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <button class="like-btn">&#10084;</button>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-content">
+        <h2>Shirt</h2>
+        <div class="boximg">
+          <img src="photos/fashionshirt.jpg" alt="Electronics Product" />
+          <p>See more</p>
+          <p class="price">₹699.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <button class="like-btn">&#10084;</button>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-content">
+        <h2>White T-Shirt</h2>
+        <div class="boximg">
+          <img src="box8.jpeg" alt="Fashion & Clothing Product" />
+          <p>See more</p>
+          <p class="price">₹799.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <button class="like-btn">&#10084;</button>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-content">
+        <h2>Top</h2>
+        <div class="boximg">
+          <img src="photos/fashiontop" alt="Home & Kitchen Product" />
+          <p>See more</p>
+          <p class="price">₹499.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <button class="like-btn">&#10084;</button>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-content">
+        <h2>T-Shirt combo</h2>
+        <div class="boximg">
+          <img src="box4.jpeg" alt="Beauty & Personal Care Product" />
+          <p>See more</p>
+          <p class="price">₹499.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <button class="like-btn">&#10084;</button>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-content">
+        <h2>T-Shirt</h2>
+        <div class="boximg">
+          <img src="box6.jpeg" alt="Sports & Outdoors Product" />
+          <p>See more</p>
+          <p class="price">₹599.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <button class="like-btn">&#10084;</button>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-content">
+        <h2>Blue Shirt</h2>
+        <div class="boximg">
+          <img src="box7.jpeg" alt="Kitchen Appliances Product" />
+          <p>See more</p>
+          <p class="price">₹899.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <button class="like-btn">&#10084;</button>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-content">
+        <h2>JBL Headphones</h2>
+        <div class="boximg">
+          <img src="photos/electheadphone.jpg" alt="Makeup & Cosmetics Product" />
+          <p>See more</p>
+          <p class="price">₹1999.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <button class="like-btn">&#10084;</button>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-content">
+        <h2>Iphone 17 Pro Max</h2>
+        <div class="boximg">
+          <img src="photos/electiphone" alt="Fragrances Product" />
+          <p>See more</p>
+          <p class="price">₹11999.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <button class="like-btn">&#10084;</button>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-content">
+        <h2>FireBolt Smart Watch</h2>
+        <div class="boximg">
+          <img src="photos/electwatch.jpg" alt="Hair Care Product" />
+          <p>See more</p>
+          <p class="price">₹1499.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <button class="like-btn">&#10084;</button>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-content">
+        <h2>Power Bank</h2>
+        <div class="boximg">
+          <img src="photos/electearbuds" alt="Skincare Product" />
+          <p>See more</p>
+          <p class="price">₹34.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+          <button class="like-btn">&#10084;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h3>About Us</h3>
+        <p>Your one-stop shop for all your needs. Quality products at great prices.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook" class="social-icon facebook">F</a>
+          <a href="#" aria-label="Twitter" class="social-icon twitter">T</a>
+          <a href="#" aria-label="Instagram" class="social-icon instagram">I</a>
+          <a href="#" aria-label="LinkedIn" class="social-icon linkedin">L</a>
+        </div>
+      </div>
+      <div class="footer-section links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="indexamazon.html">Home</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="help.html">Help</a></li>
+        </ul>
+      </div>
+      <div class="footer-section contact">
+        <h3>Contact Us</h3>
+        <p>Email: support@amazon.com</p>
+        <p>Phone: +1 234 567 890</p>
+      </div>
+      <div class="footer-section newsletter">
+        <h3>Subscribe to our Newsletter</h3>
+        <form action="#" method="post" class="newsletter-form">
+          <input type="email" placeholder="Enter your email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2024 Amazon. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="js/style.js"></script>
+</body>
+</html>

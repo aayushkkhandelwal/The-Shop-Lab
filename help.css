@@ -1,0 +1,107 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0E7C7B; 
+  padding: 10px;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.border {
+  border: 1px solid transparent;
+  padding: 8px;
+}
+
+.border:hover {
+  border: 1px solid #17BEBB; 
+}
+
+.logo {
+  width: 100px;
+  height: 30px;
+  background: #0E7C7B; 
+}
+
+.nav-search {
+  display: flex;
+  flex-grow: 1;
+  margin: 0 10px;
+}
+
+.search-select {
+  padding: 6px;
+}
+
+.nav-search input {
+  flex-grow: 1;
+  padding: 6px;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #FFFFFF; 
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #0E7C7B; 
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-item h3 {
+  margin-bottom: 8px;
+  color: #17BEBB; 
+}
+
+.faq-item p {
+  margin: 0;
+  color: #4B1D3F;
+}
+
+.contact-info {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+}
+
+.contact-info h2 {
+  color: #0E7C7B; 
+  margin-bottom: 10px;
+}
+
+
+.returnbtn {
+  background: #D62246;
+  color: white; 
+  border: none;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.returnbtn:hover {
+  background: #17BEBB; 
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+.returnbtn:active {
+  transform: scale(0.95);
+}
